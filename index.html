@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Studio</title>
+
+    <!-- GitHub Markdown CSS (Light Mode) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-light.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Libraries (Loaded globally to avoid CORS issues with local file execution) -->
+    <!-- HTML2PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"></script>
+    <!-- Marked.js (Standard Browser Build) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <svg height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true" fill="currentColor">
+                    <path
+                        d="M0 5.25C0 4.56 0.56 4 1.25 4h13.5c0.69 0 1.25 0.56 1.25 1.25v5.5c0 0.69-0.56 1.25-1.25 1.25H1.25A1.25 1.25 0 0 1 0 10.75v-5.5ZM1.25 5.5v5.5h13.5v-5.5H1.25Z M4.75 6.5h6.5a0.75 0.75 0 0 1 0 1.5h-6.5a0.75 0.75 0 0 1 0-1.5ZM4 9.25a0.75 0.75 0 0 1 0.75-0.75h3.5a0.75 0.75 0 0 1 0 1.5h-3.5A0.75 0.75 0 0 1 4 9.25Z">
+                    </path>
+                </svg>
+                Markdown Studio
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="clearEditor()">Clear</button>
+                <button class="btn" onclick="exportToPDF()">Download PDF</button>
+            </div>
+        </header>
+
+        <main class="main-editor">
+            <!-- Left Side: Editor -->
+            <section class="editor-pane">
+                <textarea id="markdown-input" placeholder="Type your markdown here..."></textarea>
+            </section>
+
+            <!-- Right Side: Beautiful Render -->
+            <section class="preview-pane" id="preview-container">
+                <div id="render-target" class="markdown-body">
+                    <!-- Markdown content goes here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Main Logic (Defer to ensure DOM is ready) -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
