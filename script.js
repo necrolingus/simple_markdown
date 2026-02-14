@@ -75,4 +75,8 @@ Try pasting your own notes here!`;
             console.log('PDF Downloaded');
         });
     };
+
+    window.printToEditablePDF = () => {
+        window.print();
+    };
 })();

@@ -24,17 +24,25 @@
 
     <div class="app-container">
         <header>
-            <div class="logo">
-                <svg height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true" fill="currentColor">
-                    <path
-                        d="M0 5.25C0 4.56 0.56 4 1.25 4h13.5c0.69 0 1.25 0.56 1.25 1.25v5.5c0 0.69-0.56 1.25-1.25 1.25H1.25A1.25 1.25 0 0 1 0 10.75v-5.5ZM1.25 5.5v5.5h13.5v-5.5H1.25Z M4.75 6.5h6.5a0.75 0.75 0 0 1 0 1.5h-6.5a0.75 0.75 0 0 1 0-1.5ZM4 9.25a0.75 0.75 0 0 1 0.75-0.75h3.5a0.75 0.75 0 0 1 0 1.5h-3.5A0.75 0.75 0 0 1 4 9.25Z">
-                    </path>
-                </svg>
-                Markdown Studio
+            <div class="branding">
+                <div class="logo">
+                    <svg height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"
+                        fill="currentColor">
+                        <path
+                            d="M0 5.25C0 4.56 0.56 4 1.25 4h13.5c0.69 0 1.25 0.56 1.25 1.25v5.5c0 0.69-0.56 1.25-1.25 1.25H1.25A1.25 1.25 0 0 1 0 10.75v-5.5ZM1.25 5.5v5.5h13.5v-5.5H1.25Z M4.75 6.5h6.5a0.75 0.75 0 0 1 0 1.5h-6.5a0.75 0.75 0 0 1 0-1.5ZM4 9.25a0.75 0.75 0 0 1 0.75-0.75h3.5a0.75 0.75 0 0 1 0 1.5h-3.5A0.75 0.75 0 0 1 4 9.25Z">
+                        </path>
+                    </svg>
+                    <div class="title-container">
+                        <div>Markdown Studio</div>
+                        <a href="https://github.com/necrolingus/simple_markdown" class="github-link"
+                            target="_blank">github.com/necrolingus/simple_markdown</a>
+                    </div>
+                </div>
             </div>
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="clearEditor()">Clear</button>
-                <button class="btn" onclick="exportToPDF()">Download PDF</button>
+                <button class="btn" onclick="exportToPDF()">Print to Image PDF</button>
+                <button class="btn" onclick="printToEditablePDF()">Print to Editable PDF</button>
             </div>
         </header>
 
@@ -54,7 +62,7 @@
     </div>
 
     <!-- Main Logic (Defer to ensure DOM is ready) -->
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
 </body>
 
 </html>
