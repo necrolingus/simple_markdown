@@ -7,7 +7,7 @@ Markdown Studio is a professional, client-side Markdown editor designed for a cl
 - **🌓 Dual-Theme Interface**: A dark, focus-friendly editor paired with a live GitHub-styled light preview.
 - **📄 Pro PDF Export**: 
     - **Print to Image PDF**: Generates an exact visual snapshot of your document.
-    - **Print to Editable PDF**: High-quality, searchable, and selectable text export using the browser's native print engine.
+    - **Print to Text PDF**: High-quality, searchable, and selectable text export using the browser's native print engine.
 - **🚀 Zero Backend**: Entirely client-side logic ensures your data stays private and the app remains blazing fast.
 - **📦 Modular Design**: Cleanly separated HTML, CSS, and JavaScript for easy maintenance and customization.
 

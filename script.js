@@ -76,7 +76,7 @@ Try pasting your own notes here!`;
         });
     };
 
-    window.printToEditablePDF = () => {
+    window.printToTextPDF = () => {
         window.print();
     };
 })();
