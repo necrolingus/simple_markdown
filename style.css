@@ -185,10 +185,18 @@ header {
         display: none !important;
     }
 
-    .preview-pane {
+    /* Reset the preview container to fill the whole page and allow multiple pages */
+    body, html, .app-container, .main-editor, .preview-pane {
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
         width: 100% !important;
-        padding: 0;
-        overflow: visible;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .preview-pane {
+        position: static !important;
     }
 
     .markdown-body {
@@ -199,5 +207,10 @@ header {
 
     body {
         background-color: white;
+    }
+    
+    /* Ensure code blocks look okay when printed */
+    .markdown-body pre {
+        white-space: pre-wrap !important;
     }
 }
